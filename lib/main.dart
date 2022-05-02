@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../screens/bmi_screen.dart';
+import '../screens/intro_screen.dart';
 
 void main() {
   runApp(const GlobeApp());
@@ -10,9 +12,14 @@ class GlobeApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Center(
-        child: Text("Hello World"),
+      theme: ThemeData(
+        primarySwatch: Colors.blueGrey
       ),
+      routes: {
+        '/': (context) => const IntroScreen(),
+        '/bmi': (context) => const BMIScreen(),
+      },
+      initialRoute: '/',
     );
   }
 }
