@@ -44,6 +44,10 @@ class MenuDrawer extends StatelessWidget {
                 break;
               case 'Weather':
                 Navigator.pushNamed(context, '/weather');
+                break;
+              case 'Training':
+                Navigator.pushNamed(context, '/training');
+                break;
             }
             
           },
