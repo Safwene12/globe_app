@@ -34,7 +34,19 @@ class MenuDrawer extends StatelessWidget {
             element,
             style: TextStyle(fontSize: 18),
           ),
-          onTap: (){},
+          onTap: (){
+            switch (element){
+              case 'Home':
+                Navigator.pushNamed(context, '/');
+                break;
+              case 'BMI Calculator':
+                Navigator.pushNamed(context, '/bmi');
+                break;
+              case 'Weather':
+                Navigator.pushNamed(context, '/weather');
+            }
+            
+          },
         ),
       );
     });
